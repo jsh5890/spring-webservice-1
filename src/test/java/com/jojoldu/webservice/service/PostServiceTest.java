@@ -1,4 +1,5 @@
-package com.jojoldu.webservice.domain;
+package com.jojoldu.webservice.service;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.After;
@@ -11,11 +12,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.jojoldu.webservice.domain.posts.Posts;
 import com.jojoldu.webservice.domain.posts.PostsRepository;
 import com.jojoldu.webservice.dto.posts.PostsSaveRequestDto;
-import com.jojoldu.webservice.service.PostsService;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PostsRepositoryTest {
+public class PostServiceTest {
 
     @Autowired
     private PostsService postsService;
