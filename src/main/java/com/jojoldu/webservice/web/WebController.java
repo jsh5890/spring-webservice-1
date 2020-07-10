@@ -1,7 +1,10 @@
 package com.jojoldu.webservice.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.jojoldu.webservice.service.PostsService;
 
 import lombok.AllArgsConstructor;
 
@@ -9,8 +12,11 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class WebController {
 
-    @GetMapping("/")
-    public String main() {
+	private PostsService postsService;
+	
+	@GetMapping("/")
+    public String main(Model model) {
+        model.addAttribute("posts", postsService.findAllDesc());
         return "main";
     }
 }

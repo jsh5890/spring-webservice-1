@@ -1,4 +1,17 @@
 spring:
+  profiles:
+    active: local # \uae30\ubcf8 \ud658\uacbd \uc120\ud0dd
+
+# local \ud658\uacbd
+---
+spring:
+  profiles: local
+  datasource:
+    data: classpath:data-h2.sql # \uc2dc\uc791\ud560\ub54c \uc2e4\ud589\uc2dc\ud0ac script
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
   h2:
     console:
       enabled: true
